@@ -1,0 +1,25 @@
+.display-area{
+  position: absolute;
+  left: 60px;
+  width: calc(100% - 60px);
+  padding-right:50vh;
+  margin-top: 20px;
+  transition: left 250ms ease-in, width 250ms ease-in;
+
+
+}
+
+.display-area-shrink{
+  width: calc(100% - 250px);
+  left: 250px;
+}
+
+
+.tittle{
+  display: flex;
+  justify-content: center;
+}
+
+.parrafo{
+  font-size: 20px;
+}
