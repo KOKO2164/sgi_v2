@@ -12,16 +12,16 @@ app-navbar{
 
 main {
   position: absolute;
-  width: calc(100% - 220px);
+  width: calc(100% - 260px);
   top: 4rem;
-  left: 220px;
+  left: 260px;
   z-index: 1;
 }
 
 app-side-nav{
   position: fixed;
   left: 0rem;
-  width: 220px;
+  width: 260px;
   height: calc(100vh - 4rem);
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
   background-color: rgba(34,34,34,1);

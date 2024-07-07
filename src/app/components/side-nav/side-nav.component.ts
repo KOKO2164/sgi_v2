@@ -25,6 +25,12 @@ export class SideNavComponent implements OnInit{
       icon:"fa-solid fa-gear",
       route:"/usuarios",
     },
+    {
+      number:"3",
+      name:"Entradas de Materiales",
+      icon:"fa-solid fa-box",
+      route:"/entradas-materiales",
+    },
   ];
 
   constructor() { }

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <h4 class="my-3">Crear Usuario</h4>
+    <div class="card">
+        <div class="card-body">
+            <form (ngSubmit)="saveUser()">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" formControlName="name" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-success">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

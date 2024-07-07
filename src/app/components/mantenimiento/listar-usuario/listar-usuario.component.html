@@ -1,18 +1,36 @@
-<h2 class="mg-10">USUARIOS</h2>
-
-<table class="table table-striped text-center">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>NOMBRE</th>
-            <th>ESTADO</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let u of users">
-            <td>{{ u.userId }}</td>
-            <td>{{ u.name }}</td>
-            <td>{{ u.status }}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="container-fluid">
+    <h4 class="my-3">Usuarios</h4>
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" name="term" class="form-control">
+                </div>
+                <div class="col d-flex">
+                    <button class="btn btn-primary ms-auto" (click)="create()">Crear Usuario</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body table-responsive p-0">
+            <table class="table table-head-fixed text-center">
+                <thead>
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>ESTADO</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of users">
+                        <td>{{ u.name }}</td>
+                        <td>{{ u.status ? 'Habilitado' : 'Deshabilitado'}}</td>
+                        <td colspan="2">
+                            <button class="btn btn-primary btn-sm">Editar</button>
+                            <button class="btn btn-danger btn-sm" [hidden]="!u.status">Deshabilitar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

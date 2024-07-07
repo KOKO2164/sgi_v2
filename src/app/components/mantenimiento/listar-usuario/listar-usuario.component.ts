@@ -20,4 +20,22 @@ export class ListarUsuarioComponent implements OnInit{
       this.users = users;
     });
   }
+
+  create(): void {
+    window.location.pathname = '/crear-usuario';
+  }
+
+  updateUser(user: User): void {
+    this.userService.updateUser(user).subscribe(() => {
+      console.log('User updated successfully');
+      window.location.pathname = '/usuarios';
+    });
+  }
+
+  updateUserStatus(user: User): void {
+    this.userService.updateUserStatus(user).subscribe(() => {
+      console.log('User status updated successfully');
+      window.location.pathname = '/usuarios';
+    });
+  }
 }
