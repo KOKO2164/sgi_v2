@@ -22,27 +22,33 @@ export class SideNavComponent implements OnInit{
     {
       number:"2",
       name:"Usuarios",
-      icon:"fa-solid fa-gear",
+      icon:"fa-solid fa-users",
       route:"/usuarios",
     },
     {
       number:"3",
       name:"Motivo",
-      icon:"fa-solid fa-box",
+      icon:"fa-solid fa-person-chalkboard",
       route:"/motivos",
     },
     {
       number:"4",
       name:"Entradas de Materiales",
-      icon:"fa-solid fa-box",
+      icon:"fa-solid fa-right-to-bracket",
       route:"/entradas-materiales",
     },
     {
       number:"5",
       name:"Salidas de Materiales",
-      icon:"fa-solid fa-box",
+      icon:"fa-solid fa-right-from-bracket",
       route:"/salidas-materiales",
     },
+    {
+      number: "6",
+      name: "Almacen",
+      icon: "fa-solid fa-cubes-stacked",
+      route: "/almacen",
+    }
 
   ];
 

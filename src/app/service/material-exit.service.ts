@@ -7,7 +7,7 @@ import { MaterialExit } from '../models/material-exit';
   providedIn: 'root'
 })
 export class MaterialExitService {
-private backendURL: string = 'https://sowead.up.railway.app/material-exits';
+private backendURL: string = 'https://sowead.up.railway.app/material-departures';
   constructor(private httpClient: HttpClient) { }
 
   findAllMaterialExits(): Observable<MaterialExit[]> {

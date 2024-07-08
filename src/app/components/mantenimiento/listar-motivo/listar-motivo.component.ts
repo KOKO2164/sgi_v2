@@ -21,10 +21,8 @@ export class ListarMotivoComponent implements OnInit{
     });
   }
 
-  createMotive(): void {
-    window.location.pathname = '/crear-usuario';
+  createMotive (): void {
+    window.location.pathname = '/crear-motivo';
   }
-
-
 
 }
