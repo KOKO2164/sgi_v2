@@ -40,9 +40,4 @@ export class MotiveService {
     console.log('Updating supplier status to backend');
     return this.httpClient.patch<Motive>(`${this.update_status}${motive.motiveId}`, motive);
   }
-
-  saveMotive(motive: Motive): Observable<Motive> {
-    console.log('Saving motive to backend');
-    return this.httpClient.post<Motive>(`${this.backendURL}/add`, motive);
-  }
 }
