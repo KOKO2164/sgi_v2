@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'crear-motivo', component: FormCreateMotiveComponent },
   { path: 'entradas-materiales', component: ListarEntradaMaterialComponent },
   { path: 'salidas-materiales', component: ListarSalidaMaterialComponent },
-  { path: 'almacen', component: ListarAlmacenComponent }
+  { path: 'almacen', component: ListarAlmacenComponent },
   { path: 'editar-usuario/:id', component: FormUpdateComponent },
 ];
 

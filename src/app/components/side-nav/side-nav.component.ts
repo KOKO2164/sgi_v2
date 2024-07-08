@@ -32,24 +32,23 @@ export class SideNavComponent implements OnInit{
       route:"/motivos",
     },
     {
-      number:"4",
+      number: "4",
+      name: "Almacen",
+      icon: "fa-solid fa-cubes-stacked",
+      route: "/almacen",
+    },
+    {
+      number:"5",
       name:"Entradas de Materiales",
       icon:"fa-solid fa-right-to-bracket",
       route:"/entradas-materiales",
     },
     {
-      number:"5",
+      number:"6",
       name:"Salidas de Materiales",
       icon:"fa-solid fa-right-from-bracket",
       route:"/salidas-materiales",
-    },
-    {
-      number: "6",
-      name: "Almacen",
-      icon: "fa-solid fa-cubes-stacked",
-      route: "/almacen",
     }
-
   ];
 
   constructor() { }
