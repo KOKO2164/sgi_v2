@@ -1,0 +1,24 @@
+<h2>SALIDA DE MATERIALES</h2>
+
+<table class="table table-striped text-center">
+    <thead>
+        <tr>
+            <th>DESCRIPCIÓN</th>
+            <th>CANTIDAD</th>
+            <th>PRECIO</th>
+            <th>USUARIO</th>
+            <th>MOTIVO</th>
+            <th>ESTADO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of materialExits">
+            <td>{{ e.description }}</td>
+            <td>{{ e.quantity }}</td>
+            <td>{{ e.price }}</td>
+            <td>{{ e.user.name }}</td>
+            <td>{{ e.motive.name }}</td>
+            <td>{{ e.status ? 'Habilitado' : 'Deshabilitado'}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -14,7 +14,7 @@ export class SideNavComponent implements OnInit{
 
   list = [
     {
-      number:"1", 
+      number:"1",
       name:"Inicio",
       icon:"fa-solid fa-house",
       route:"/",
@@ -31,6 +31,12 @@ export class SideNavComponent implements OnInit{
       icon:"fa-solid fa-box",
       route:"/entradas-materiales",
     },
+    {
+      number:"4",
+      name:"Salidas de Materiales",
+      icon:"fa-solid fa-box",
+      route:"/salidas-materiales",
+    }
   ];
 
   constructor() { }

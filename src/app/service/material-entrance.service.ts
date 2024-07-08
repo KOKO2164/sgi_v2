@@ -14,4 +14,7 @@ export class MaterialEntranceService {
     console.log('Fetching material entrances from backend');
     return this.httpClient.get<MaterialEntrance[]>(`${this.backendURL}`);
   }
+
+
+  
 }

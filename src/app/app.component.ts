@@ -5,11 +5,13 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { CommonModule } from '@angular/common';
 import { ListarUsuarioComponent } from './components/mantenimiento/listar-usuario/listar-usuario.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { ListarEntradaMaterialComponent } from './components/mantenimiento/listar-entrada-material/listar-entrada-material.component';
+import { ListarSalidaMaterialComponent } from './components/mantenimiento/listar-salida-material/listar-salida-material.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, SideNavComponent, InicioComponent,ListarUsuarioComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, SideNavComponent, InicioComponent,ListarUsuarioComponent, ListarEntradaMaterialComponent, ListarSalidaMaterialComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
