@@ -26,10 +26,7 @@ export class ListarUsuarioComponent implements OnInit{
   }
 
   updateUser(user: User): void {
-    this.userService.updateUser(user).subscribe(() => {
-      console.log('User updated successfully');
-      window.location.pathname = '/usuarios';
-    });
+     window.location.pathname = '/editar-usuario/' + user.userId;
   }
 
   updateUserStatus(user: User): void {
