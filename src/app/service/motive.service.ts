@@ -6,7 +6,7 @@ import { Motive } from '../models/motive';
 @Injectable({
   providedIn: 'root'
 })
-export class MotivoService {
+export class MotiveService {
 
   private backendURL: string = "https://sowead.up.railway.app/motives";
 

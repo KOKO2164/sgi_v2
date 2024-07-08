@@ -7,11 +7,12 @@ import { ListarUsuarioComponent } from './components/mantenimiento/listar-usuari
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListarEntradaMaterialComponent } from './components/mantenimiento/listar-entrada-material/listar-entrada-material.component';
 import { ListarSalidaMaterialComponent } from './components/mantenimiento/listar-salida-material/listar-salida-material.component';
+import { ListarMotivoComponent } from './components/mantenimiento/listar-motivo/listar-motivo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, SideNavComponent, InicioComponent,ListarUsuarioComponent, ListarEntradaMaterialComponent, ListarSalidaMaterialComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, SideNavComponent, InicioComponent, ListarUsuarioComponent, ListarMotivoComponent, ListarEntradaMaterialComponent, ListarSalidaMaterialComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

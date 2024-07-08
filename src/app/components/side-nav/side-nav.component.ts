@@ -27,16 +27,23 @@ export class SideNavComponent implements OnInit{
     },
     {
       number:"3",
+      name:"Motivo",
+      icon:"fa-solid fa-box",
+      route:"/motivos",
+    },
+    {
+      number:"4",
       name:"Entradas de Materiales",
       icon:"fa-solid fa-box",
       route:"/entradas-materiales",
     },
     {
-      number:"4",
+      number:"5",
       name:"Salidas de Materiales",
       icon:"fa-solid fa-box",
       route:"/salidas-materiales",
-    }
+    },
+
   ];
 
   constructor() { }
