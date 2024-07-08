@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FormCreateComponent {
   form: FormGroup;
-  
+
   constructor(private userService: UserService) {
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),

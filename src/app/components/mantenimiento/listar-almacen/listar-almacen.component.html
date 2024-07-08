@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <h4 class="my-3 text-center">LISTADO DE ALMACEN</h4>
+  <div class="card">
+      <div class="card-body table-responsive p-0">
+          <table class="table table-head-fixed text-center">
+              <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>CODIGO</th>
+                    <th>NOMBRE</th>
+                    <th>ESTADO</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let s of storages">
+                  <td>{{ s.storageId }}</td>
+                  <td>{{ s.code }}</td>
+                  <td>{{ s.name }}</td>
+                  <td>{{ s.status ? 'Habilitado' : 'Deshabilitado'}}</td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

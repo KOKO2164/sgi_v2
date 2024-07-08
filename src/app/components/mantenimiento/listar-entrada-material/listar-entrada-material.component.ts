@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MaterialEntrance } from '../../../models/material-entrance';
 import { MaterialEntranceService } from '../../../service/material-entrance.service';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './listar-entrada-material.component.html',
   styleUrl: './listar-entrada-material.component.css'
 })
-export class ListarEntradaMaterialComponent {
+export class ListarEntradaMaterialComponent implements OnInit{
   materialEntrances: MaterialEntrance[] = [];
 
   constructor(private materialEntranceService: MaterialEntranceService) {}

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <h4 class="my-3 text-center">LISTADO DE MOTIVOS</h4>
+  <div class="card">
+      <div class="card-header">
+          <div class="row">
+              <div class="col-3">
+                  <input type="text" name="term" class="form-control">
+              </div>
+              <div class="col d-flex">
+                  <button class="btn btn-primary ms-auto" (click)="createMotive()">Crear Motivo</button>
+              </div>
+          </div>
+      </div>
+      <div class="card-body table-responsive p-0">
+          <table class="table table-head-fixed text-center">
+              <thead>
+                  <tr>
+                      <th>NOMBRE</th>
+                      <th>CATEGORIA</th>
+                      <th>ESTADO</th>
+                      <th>ACCIONES</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let m of motives">
+                      <td>{{ m.name }}</td>
+                      <td>{{m.category}}</td>
+                      <td>{{ m.status ? 'Habilitado' : 'Deshabilitado'}}</td>
+                      <td colspan="2">
+                          <button class="btn btn-primary btn-sm">Editar</button>
+                          <button class="btn btn-danger btn-sm" [hidden]="!m.status">Deshabilitar</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

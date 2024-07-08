@@ -39,4 +39,7 @@ export class MaterialEntranceService {
     console.log('Updating material entrance status to backend');
     return this.httpClient.patch<MaterialEntrance>(`${this.update_status}${materialEntrance.materialEntranceId}`, materialEntrance);
   }
+
+
+  
 }
