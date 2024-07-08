@@ -27,7 +27,7 @@ export class SideNavComponent implements OnInit{
     },
     {
       number:"3",
-      name:"Motivo",
+      name:"Motivos",
       icon:"fa-solid fa-person-chalkboard",
       route:"/motivos",
     },

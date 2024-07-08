@@ -4,6 +4,7 @@ import { ListarUsuarioComponent } from './components/mantenimiento/listar-usuari
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListarEntradaMaterialComponent } from './components/mantenimiento/listar-entrada-material/listar-entrada-material.component';
 import { FormCreateComponent } from './components/mantenimiento/listar-usuario/form-create/form-create.component';
+import { FormUpdateComponent } from './components/mantenimiento/listar-usuario/form-update/form-update.component';
 import { ListarSalidaMaterialComponent } from './components/mantenimiento/listar-salida-material/listar-salida-material.component';
 import { ListarMotivoComponent } from './components/mantenimiento/listar-motivo/listar-motivo.component';
 import { FormCreateMotiveComponent } from './components/mantenimiento/listar-motivo/form-create-motive/form-create-motive.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'entradas-materiales', component: ListarEntradaMaterialComponent },
   { path: 'salidas-materiales', component: ListarSalidaMaterialComponent },
   { path: 'almacen', component: ListarAlmacenComponent }
+  { path: 'editar-usuario/:id', component: FormUpdateComponent },
 ];
 
 @NgModule({

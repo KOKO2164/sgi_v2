@@ -8,9 +8,10 @@ import { User } from '../models/user';
 })
 export class UserService {
   private url: string = 'https://sowead.up.railway.app/users';
-  private add: string = this.url + '/add';
+  private get: string = this.url + '/';
+  private add: string = this.url + '/save';
   private update: string = this.url + '/update/';
-  private update_status: string = this.url + '/update_status/';
+  private update_status: string = this.url + '/update-status/';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -19,14 +20,19 @@ export class UserService {
     return this.httpClient.get<User[]>(`${this.url}`);
   }
 
+  findUserById(userId: number): Observable<User> {
+    console.log('Fetching user from backend');
+    return this.httpClient.get<User>(`${this.get}${userId}`);
+  }
+
   saveUser(user: User): Observable<User> {
     console.log('Saving user to backend');
     return this.httpClient.post<User>(`${this.add}`, user);
   }
 
-  updateUser(user: User): Observable<User> {
+  updateUser(user: User, userId: number): Observable<User> {
     console.log('Updating user to backend');
-    return this.httpClient.put<User>(`${this.update}${user.userId}`, user);
+    return this.httpClient.put<User>(`${this.update}${userId}`, user);
   }
 
   updateUserStatus(user: User): Observable<User> {
