@@ -6,7 +6,7 @@ export class MaterialDeparture {
     materialDepartureId: number=0;
     description: string='';
     quantity: number=0;
-    price: string='';
+    price: number=0;
     status: boolean=true;
     user: User = new User();
     motive: Motive = new Motive();

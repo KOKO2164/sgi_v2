@@ -1,25 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialExitService } from '../../../service/material-exit.service';
+import { MaterialDepartureService } from '../../../service/material-departure.service';
 import { CommonModule } from '@angular/common';
-import { MaterialExit } from '../../../models/material-exit';
+import { MaterialDeparture } from '../../../models/material-departure';
 
 @Component({
   selector: 'app-listar-salida-material',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './listar-salida-material.component.html',
-  styleUrl: './listar-salida-material.component.css'
+  styleUrl: './listar-salida-material.component.css',
 })
-export class ListarSalidaMaterialComponent implements OnInit{
+export class ListarSalidaMaterialComponent implements OnInit {
+  materialDepartures: MaterialDeparture[] = [];
 
-  materialExits: MaterialExit[] = [];
-
-  constructor(private materialExitService: MaterialExitService){}
+  constructor(private materialDepartureService: MaterialDepartureService) {}
 
   ngOnInit(): void {
-    this.materialExitService.findAllMaterialExits().subscribe((materialExits) => {
-      this.materialExits = materialExits;
-    });
+    this.materialDepartureService
+      .findAllMaterialDepartures()
+      .subscribe((materialDepartures) => {
+        console.log(materialDepartures);
+        this.materialDepartures = materialDepartures;
+      });
   }
 
+  create(): void {
+    window.location.pathname = '/registrar-salida-de-material';
+  }
+
+  updateMaterialDeparture(materialDeparture: MaterialDeparture): void {
+    window.location.pathname =
+      '/editar-salida-de-material/' + materialDeparture.materialDepartureId;
+  }
 }

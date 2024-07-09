@@ -9,6 +9,7 @@ import { Storage } from '../models/storage';
 export class StorageService {
   private url: string = 'https://sowead.up.railway.app/storages';
   private get: string = this.url + '/';
+  private getByStatus: string = this.url + '/active';
   private add: string = this.url + '/save';
   private update: string = this.url + '/update/';
   private update_status: string = this.url + '/update-status/';
@@ -23,6 +24,11 @@ export class StorageService {
   findStorageById(storageId: number): Observable<Storage> {
     console.log('Fetching storage from backend');
     return this.httpClient.get<Storage>(`${this.get}${storageId}`);
+  }
+
+  findStorageByActiveStatus(): Observable<Storage[]> {
+    console.log('Fetching storage by status from backend');
+    return this.httpClient.get<Storage[]>(`${this.getByStatus}`);
   }
 
   saveStorage(storage: Storage): Observable<Storage> {

@@ -17,6 +17,7 @@ export class FormCreateComponent {
   constructor(private userService: UserService) {
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
+      status: new FormControl(true)
     });
   }
 

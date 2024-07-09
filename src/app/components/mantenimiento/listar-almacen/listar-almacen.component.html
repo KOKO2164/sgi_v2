@@ -9,6 +9,7 @@
                     <th>CODIGO</th>
                     <th>NOMBRE</th>
                     <th>ESTADO</th>
+                    <th>ACCIONES</th>
                   </tr>
               </thead>
               <tbody>
@@ -17,6 +18,10 @@
                   <td>{{ s.code }}</td>
                   <td>{{ s.name }}</td>
                   <td>{{ s.status ? 'Habilitado' : 'Deshabilitado'}}</td>
+                  <td colspan="2">
+                      <button class="btn btn-primary btn-sm" [hidden]="!s.status">Editar</button>
+                      <button class="btn btn-danger btn-sm" [hidden]="!s.status">Deshabilitar</button>
+                  </td>
               </tr>
               </tbody>
           </table>

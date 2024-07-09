@@ -4,17 +4,17 @@ import { Observable } from 'rxjs';
 import { Motive } from '../models/motive';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MotiveService {
-
-  private url: string = "https://sowead.up.railway.app/motives";
+  private url: string = 'https://sowead.up.railway.app/motives';
   private get: string = this.url + '/';
+  private getByStatus: string = this.url + '/active';
   private add: string = this.url + '/save';
   private update: string = this.url + '/update/';
   private update_status: string = this.url + '/update-status/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   findAllMotives(): Observable<Motive[]> {
     console.log('Fetching suppliers from backend');
@@ -24,6 +24,11 @@ export class MotiveService {
   findMotiveById(motiveId: number): Observable<Motive> {
     console.log('Fetching supplier from backend');
     return this.httpClient.get<Motive>(`${this.get}${motiveId}`);
+  }
+
+  findMotiveByActiveStatus(): Observable<Motive[]> {
+    console.log('Fetching supplier by status from backend');
+    return this.httpClient.get<Motive[]>(`${this.getByStatus}`);
   }
 
   saveMotive(motive: Motive): Observable<Motive> {
@@ -38,6 +43,9 @@ export class MotiveService {
 
   updateMotiveStatus(motive: Motive): Observable<Motive> {
     console.log('Updating supplier status to backend');
-    return this.httpClient.patch<Motive>(`${this.update_status}${motive.motiveId}`, motive);
+    return this.httpClient.patch<Motive>(
+      `${this.update_status}${motive.motiveId}`,
+      motive
+    );
   }
 }

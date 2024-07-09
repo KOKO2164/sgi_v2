@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { UserService } from '../../../../service/user.service';
 import { User } from '../../../../models/user';
 import { ActivatedRoute } from '@angular/router';
@@ -10,9 +15,9 @@ import { ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './form-update.component.html',
-  styleUrl: './form-update.component.css'
+  styleUrl: './form-update.component.css',
 })
-export class FormUpdateComponent implements OnInit{
+export class FormUpdateComponent implements OnInit {
   form: FormGroup;
   user: User = { userId: 0, name: '', status: false };
 

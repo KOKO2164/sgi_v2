@@ -9,6 +9,7 @@ import { User } from '../models/user';
 export class UserService {
   private url: string = 'https://sowead.up.railway.app/users';
   private get: string = this.url + '/';
+  private getByStatus: string = this.url + '/active';
   private add: string = this.url + '/save';
   private update: string = this.url + '/update/';
   private update_status: string = this.url + '/update-status/';
@@ -25,6 +26,11 @@ export class UserService {
     return this.httpClient.get<User>(`${this.get}${userId}`);
   }
 
+  findUserByActiveStatus(): Observable<User[]> {
+    console.log('Fetching user by status from backend');
+    return this.httpClient.get<User[]>(`${this.getByStatus}`);
+  }
+
   saveUser(user: User): Observable<User> {
     console.log('Saving user to backend');
     return this.httpClient.post<User>(`${this.add}`, user);
@@ -37,6 +43,9 @@ export class UserService {
 
   updateUserStatus(user: User): Observable<User> {
     console.log('Updating user status to backend');
-    return this.httpClient.patch<User>(`${this.update_status}${user.userId}`, user);
+    return this.httpClient.patch<User>(
+      `${this.update_status}${user.userId}`,
+      user
+    );
   }
 }
