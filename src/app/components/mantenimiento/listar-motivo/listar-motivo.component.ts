@@ -25,4 +25,15 @@ export class ListarMotivoComponent implements OnInit{
     window.location.pathname = '/crear-motivo';
   }
 
+  updateMotive(motive: Motive): void {
+    window.location.pathname = '/editar-motivo/' + motive.motiveId;
+  }
+
+  updateMotiveStatus(motive: Motive): void {
+    this.motiveService.updateMotiveStatus(motive).subscribe(() => {
+      console.log('Motive status updated successfully');
+      window.location.pathname = '/motivos';
+    });
+  }
+
 }

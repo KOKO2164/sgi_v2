@@ -20,4 +20,13 @@ export class ListarEntradaMaterialComponent implements OnInit{
       this.materialEntrances = materialEntrances;
     });
   }
+
+  create(): void {
+    window.location.pathname = '/registrar-entrada-de-material';
+  }
+
+  updateMaterialEntrance(materialEntrance: MaterialEntrance): void {
+    window.location.pathname =
+      '/editar-entrada-de-material/' + materialEntrance.materialEntranceId;
+  }
 }

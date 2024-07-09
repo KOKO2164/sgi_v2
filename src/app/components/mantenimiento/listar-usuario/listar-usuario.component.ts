@@ -26,7 +26,7 @@ export class ListarUsuarioComponent implements OnInit{
   }
 
   updateUser(user: User): void {
-     window.location.pathname = '/editar-usuario/' + user.userId;
+    window.location.pathname = '/editar-usuario/' + user.userId;
   }
 
   updateUserStatus(user: User): void {

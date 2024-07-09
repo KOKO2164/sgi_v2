@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MotiveService } from '../../../../service/motive.service';
 import { Motive } from '../../../../models/motive';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-form-create-motive',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './form-create-motive.component.html',
   styleUrl: './form-create-motive.component.css'
 })
@@ -18,6 +18,7 @@ export class FormCreateMotiveComponent{
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
       category : new FormControl('', [Validators.required]),
+      status: new FormControl(true)
     });
   }
 
