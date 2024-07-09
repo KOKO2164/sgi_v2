@@ -25,4 +25,20 @@ export class ListarAlmacenComponent implements OnInit{
       }
     });
   }
+
+  createStorage (): void {
+    window.location.pathname = '/crear-almacen';
+  }
+
+  updateStorage(storage: Storage): void {
+    window.location.pathname = '/editar-almacen/' + storage.storageId;
+  }
+
+  updateStorageStatus(storage: Storage): void {
+    this.storageService.updateStorageStatus(storage).subscribe(() =>{
+      console.log('Storage status updated successfully');
+      window.location.pathname = '/almacen';
+    });
+  }
+
 }

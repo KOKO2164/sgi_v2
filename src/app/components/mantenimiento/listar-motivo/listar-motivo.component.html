@@ -3,9 +3,6 @@
   <div class="card">
     <div class="card-header">
       <div class="row">
-        <div class="col-3">
-          <input type="text" name="term" class="form-control">
-        </div>
         <div class="col d-flex">
           <button class="btn btn-primary ms-auto" (click)="createMotive()">Crear Motivo</button>
         </div>
@@ -27,8 +24,8 @@
             <td>{{m.category}}</td>
             <td>{{ m.status ? 'Habilitado' : 'Deshabilitado'}}</td>
             <td colspan="2">
-              <button class="btn btn-primary btn-sm" [hidden]="!m.status">Editar</button>
-              <button class="btn btn-danger btn-sm" [hidden]="!m.status">Deshabilitar</button>
+              <button class="btn btn-primary btn-sm" [hidden]="!m.status" (click)="updateMotive(m)">Editar</button>
+              <button class="btn btn-danger btn-sm" [hidden]="!m.status"(click)="updateMotiveStatus(m)">Deshabilitar</button>
             </td>
           </tr>
         </tbody>
